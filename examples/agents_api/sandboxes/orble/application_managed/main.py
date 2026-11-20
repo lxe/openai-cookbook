@@ -2,7 +2,7 @@
 # requires-python = ">=3.11"
 # dependencies = [
 #     "openai>=3.13.0",
-#     "orble-sdk>=0.1.2",
+#     "orble-sdk>=0.1.3",
 # ]
 # ///
 

@@ -27,9 +27,10 @@ def find_box(session_id: str) -> orble.Box | None:
 
 
 def install_executor(box: orble.Box, *, reconnect: bool = False) -> None:
-    install = "sudo npm install -g @openai/codex@alpha"
+    # npm's global prefix belongs to agent. The box image has a release build of Codex; the executor needs alpha.
+    install = "npm install -g @openai/codex@alpha"
     if reconnect:
-        install = f"(command -v codex || {install})"
+        install = f"(npm ls -g @openai/codex | grep -q alpha || {install})"
     result = box.exec(
         f"sudo mkdir -p {WORKSPACE} && sudo chown agent:agent {WORKSPACE} && {install}",
         timeout=300,

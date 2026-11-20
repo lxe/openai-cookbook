@@ -1,7 +1,7 @@
 # /// script
 # requires-python = ">=3.11"
 # dependencies = [
-#     "orble-sdk>=0.1.2",
+#     "orble-sdk>=0.1.3",
 #     "fastapi>=0.115,<1",
 #     "uvicorn>=0.30,<1",
 #     "openai>=3.13.0",

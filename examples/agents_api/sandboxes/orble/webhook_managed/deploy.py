@@ -1,7 +1,7 @@
 # /// script
 # requires-python = ">=3.11"
 # dependencies = [
-#     "orble-sdk>=0.1.2",
+#     "orble-sdk>=0.1.3",
 # ]
 # ///
 
